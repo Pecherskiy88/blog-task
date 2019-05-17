@@ -4,7 +4,6 @@ import BlogListItem from "../BlogListItem/BlogListItem";
 import { connect } from "react-redux";
 
 const BlogList = ({ fetchData }) => {
-  console.log(fetchData);
   return (
     <div className={s.BlogList}>
       {fetchData.map(el => (
@@ -13,6 +12,7 @@ const BlogList = ({ fetchData }) => {
           date={el.date}
           title={el.title}
           text={el.body}
+          id={el.id}
           key={el.id}
         />
       ))}

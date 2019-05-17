@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Header from "../Header/Header";
-import BlogList from "../BlogList/BlogList";
+import { Switch, Route } from "react-router-dom";
 import { asyncData } from "../redux/action/fetchDataAction";
 import { connect } from "react-redux";
+import MainPage from "../MainPage/MainPage";
+import Article from "../Article/Article";
 
 class App extends Component {
   componentDidMount() {
@@ -10,19 +11,23 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        <Header />
-        <BlogList />
-      </div>
+      <Switch>
+        <Route exact path="/" component={MainPage} />
+        <Route path="/:id" component={Article} />
+      </Switch>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  fetchData: state.fetchData
+});
 
 const mapDispatchToProps = dispatch => ({
   fetch: () => dispatch(asyncData())
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(App);
