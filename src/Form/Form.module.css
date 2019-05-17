@@ -1,0 +1,9 @@
+.Form {
+  width: 80%;
+  margin: 0 auto;
+}
+.Textarea {
+  width: 100%;
+  height: 80px;
+  overflow-y: hidden;
+}

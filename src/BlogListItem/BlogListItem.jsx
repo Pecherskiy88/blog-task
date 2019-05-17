@@ -7,14 +7,13 @@ const BlogListItem = ({ author, title, text, date, id }) => {
     <div className={s.BlogListItem}>
       <p>
         {author}
-        <span>{date}</span>
+        <span className={s.Date}>{date}</span>
       </p>
       <p>{title}</p>
       <p>{text}</p>
       <NavLink className="news__btn" to={`/${id}`}>
-        Читати
+        Read the full post
       </NavLink>
-      <button>comment</button>
     </div>
   );
 };
