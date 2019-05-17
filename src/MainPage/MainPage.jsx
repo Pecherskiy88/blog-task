@@ -1,13 +1,14 @@
 import React from "react";
-import Header from "../Header/Header";
-import BlogList from "../BlogList/BlogList";
+import { Switch, Route } from "react-router-dom";
+import All from "../All/All";
+import Article from "../Article/Article";
 
 const MainPage = () => {
   return (
-    <div>
-      <Header />
-      <BlogList />
-    </div>
+    <Switch>
+      <Route exact path="/" component={All} />
+      <Route path="/:id" component={Article} />
+    </Switch>
   );
 };
 

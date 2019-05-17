@@ -1,11 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 const Article = ({ fetchData, match }) => {
   console.log(fetchData);
   const data = fetchData.find(el => el.id === Number(match.params.id));
   return (
     <div>
+      <NavLink to="/">BACK</NavLink>
       <p>
         {data.author}
         <span>{data.date}</span>

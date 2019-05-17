@@ -1,20 +1,23 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
 import { asyncData } from "../redux/action/fetchDataAction";
 import { connect } from "react-redux";
+import Loader from "react-loader-spinner";
 import MainPage from "../MainPage/MainPage";
-import Article from "../Article/Article";
 
 class App extends Component {
   componentDidMount() {
     this.props.fetch();
   }
   render() {
+    const { fetchData } = this.props;
     return (
-      <Switch>
-        <Route exact path="/" component={MainPage} />
-        <Route path="/:id" component={Article} />
-      </Switch>
+      <div>
+        {fetchData.length ? (
+          <MainPage />
+        ) : (
+          <Loader type="Plane" color="#00BFFF" height="100" width="100" />
+        )}
+      </div>
     );
   }
 }
