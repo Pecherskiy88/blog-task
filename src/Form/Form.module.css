@@ -1,9 +1,32 @@
 .Form {
   width: 80%;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 .Textarea {
   width: 100%;
   height: 80px;
   overflow-y: hidden;
+  box-sizing: border-box;
+}
+.Btn {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #2caaed;
+  color: #fff;
+  border: 1px solid #2caaed;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+.Btn:hover {
+  color: #2caaed;
+  background-color: #fff;
+  cursor: pointer;
+}
+.Btn:active {
+  background-color: #2caaed;
+  color: #fff;
+}
+.List {
+  margin-top: 2rem;
 }

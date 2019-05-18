@@ -2,4 +2,28 @@
   width: 80%;
   margin: 0 auto;
   background-color: #fff;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+.Btn {
+  text-decoration: none;
+  color: #2caaed;
+  border: 1px solid #2caaed;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+.Btn:hover {
+  color: #fff;
+  background-color: #2caaed;
+  padding: 0.7rem 1.2rem;
+}
+.Date {
+  padding-left: 1rem;
+}
+.Title {
+  font-weight: 600;
+  text-align: center;
+}
+.Text {
+  font-style: italic;
 }

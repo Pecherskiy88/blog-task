@@ -1,14 +1,13 @@
 .Header {
-  margin: 0 auto;
+  margin: auto;
   display: flex;
-  height: 55px;
   justify-content: space-around;
   background-color: #d9f5ff;
   align-items: center;
+  width: 100%;
 }
 .Logo {
+  width: 40px;
+  height: 57px;
   display: block;
-}
-.Title {
-  color: #be380d;
 }

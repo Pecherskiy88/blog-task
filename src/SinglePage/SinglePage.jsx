@@ -16,13 +16,15 @@ class SinglePage extends Component {
     return (
       <div className={s.SinglePage}>
         <div className={s.Article}>
-          <NavLink to="/">BACK</NavLink>
+          <NavLink className={s.Btn} to="/">
+            Back to main
+          </NavLink>
           <p>
             {simpleData.author}
-            <span>{simpleData.date}</span>
+            <span className={s.Date}>{simpleData.date}</span>
           </p>
-          <p>{simpleData.title}</p>
-          <p>{simpleData.body}</p>
+          <p className={s.Title}>{simpleData.title}</p>
+          <p className={s.Text}>{simpleData.body}</p>
         </div>
         <Form />
       </div>

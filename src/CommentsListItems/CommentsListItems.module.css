@@ -1,0 +1,9 @@
+.Item {
+  background-color: #ffffff;
+  padding: 0 0.5rem;
+}
+
+.Id {
+  color: grey;
+  font-style: italic;
+}

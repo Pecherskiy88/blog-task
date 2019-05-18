@@ -5,14 +5,14 @@ import s from "./BlogListItem.module.css";
 const BlogListItem = ({ author, title, text, date, id }) => {
   return (
     <div className={s.BlogListItem}>
-      <p>
+      <p className={s.Author}>
         {author}
         <span className={s.Date}>{date}</span>
       </p>
-      <p>{title}</p>
-      <p>{text}</p>
-      <NavLink className="news__btn" to={`/${id}`}>
-        Read the full post
+      <p className={s.Title}>{title}</p>
+      <p className={s.Text}>{text}</p>
+      <NavLink className={s.Btn} to={`/${id}`}>
+        Read the full post >>
       </NavLink>
     </div>
   );

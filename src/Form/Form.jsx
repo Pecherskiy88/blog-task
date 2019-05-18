@@ -32,12 +32,13 @@ class Form extends Component {
         <form onSubmit={this.handleSubmit}>
           <textarea
             onChange={this.handleChange}
-            placeholder="Write comment"
+            placeholder="Write comment..."
             className={s.Textarea}
+            value={this.inputValue}
           />
-          <input type="submit" value="send" />
+          <input className={s.Btn} type="submit" value="send" />
         </form>
-        <ul>
+        <ol className={s.List}>
           {this.props.comments ? (
             this.props.comments.map(el => (
               <CommentsListItems comment={el} key={el.id} />
@@ -45,13 +46,14 @@ class Form extends Component {
           ) : (
             <Loader type="Plane" color="#00BFFF" height="100" width="100" />
           )}
-        </ul>
+        </ol>
       </div>
     );
   }
 }
 const mapStateToProps = state => ({
-  comments: state.simpleData.comments
+  comments: state.simpleData.comments,
+  inputValue: state.inputValue
 });
 const mapDispatchToProps = dispatch => ({
   inputAction: e => dispatch(inputAction(e))
@@ -61,5 +63,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Form);
-
-// inputAction, inputValue, comments;
