@@ -1,7 +1,12 @@
 import React from "react";
 
-const CommentsListItems = () => {
-  return <li>comments</li>;
+const CommentsListItems = ({ comment }) => {
+  return (
+    <li>
+      <p>{comment.id}</p>
+      <p>{comment.body}</p>
+    </li>
+  );
 };
 
 export default CommentsListItems;

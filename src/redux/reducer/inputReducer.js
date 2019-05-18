@@ -1,7 +1,7 @@
-function inputValue(state = [], action) {
+function inputValue(state = "", action) {
   switch (action.type) {
     case "ONCHANGE":
-      return [...state, action.in];
+      return action.inputValue;
     default:
       return state;
   }

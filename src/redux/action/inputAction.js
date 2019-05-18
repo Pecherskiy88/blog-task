@@ -1,4 +1,4 @@
 export const inputAction = e => ({
-  type: "ONSUBMIT",
+  type: "ONCHANGE",
   inputValue: e.target.value
 });
